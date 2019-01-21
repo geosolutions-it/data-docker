@@ -14,6 +14,6 @@ TEMP_DOWNLOADED=$2
 echo "GeoServer Data Directory is going to be downloaded"
 # for debugging
 echo "curl -L -O hhttps://build.geo-solutions.it/geonode/geoserver/latest/data-${GEOSERVER_VERSION}.zip"
-curl -L -O https://build.geo-solutions.it/geonode/geoserver/latest/data-$GEOSERVER_VERSION.zip && \
+curl -L -O --no-check-certificates https://build.geo-solutions.it/geonode/geoserver/latest/data-$GEOSERVER_VERSION.zip && \
 unzip -x -d ${TEMP_DOWNLOADED} data-$GEOSERVER_VERSION.zip
 echo "GeoServer Data Directory download has been completed"
